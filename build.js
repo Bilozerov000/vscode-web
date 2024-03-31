@@ -39,7 +39,8 @@ fse.copySync("../vscode-web", "../dist");
 if (fs.existsSync("../dist/extensions/embedd")) {
   fs.rmdirSync("../dist/extensions/embedd", { recursive: true });
 }
-fse.copySync("../../extension/dist", "../dist/extensions/embedd/dist")
-fse.copySync("../../extension/package.json", "../dist/extensions/embedd/package.json")
+fse.copySync("../../extension/dist", "../dist/extensions/embedd/dist");
+fse.copySync("../../extension/assets", "../dist/extensions/embedd/assets");
+fse.copySync("../../extension/package.json", "../dist/extensions/embedd/package.json");
 
 
