@@ -13,6 +13,11 @@ if (!fs.existsSync("vscode")) {
 
 process.chdir("vscode");
 
+if (fs.existsSync("./extensions/embedd")) {
+  fs.rmdirSync("./extensions/embedd", { recursive: true });
+}
+fse.copySync("../../extension", "./extensions/embedd");
+
 if (!fs.existsSync("node_modules")) {
   child_process.execSync("yarn", { stdio: "inherit" });
 }
